@@ -41,3 +41,21 @@ mySearch = function(source: string, subString: string) {
   return result > -1;
 }
 ```
+
+#### 可索引类型
+```ts
+interface StringArray = {
+  [index: number]: string;
+}
+let myArray: StringArray;
+let str = myArray[0]
+// 自己手写一遍就好像懂了，就相当于自己定义的字符串数组
+
+//  上下转译为js是同样的结果 有一点需要注意的，就是下面我其实会包错在TS,但是仍然可以转译为js
+let myArray2 : Array<string>;
+myArray2 = ['123', 123]
+let str1 = myArray[0]
+```
+
+#### 类类型
+看文档去吧，我还理解这是个啥！！！5555
